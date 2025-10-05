@@ -1,0 +1,10 @@
+@article{zhu2022saying,
+  author = {Zhu, Ye and Wu, Yu and Yang, Yi and Yan, Yan},
+  journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)},
+  title = {Saying the Unseen: Video Descriptions via Dialog Agents},
+  year = {2022},
+  volume = {44},
+  number = {10},
+  pages = {7190-7204},
+  doi = {10.1109/TPAMI.2021.3093360},
+}

@@ -1,0 +1,6 @@
+@inproceedings{zhu2023discrete,
+  title = {Discrete Contrastive Diffusion for Cross-Modal Music and Image Generation},
+  author = {Zhu, Ye and Wu, Yu and Olszewski, Kyle and Ren, Jian and Tulyakov, Sergey and Yan, Yan},
+  booktitle = {The Eleventh International Conference on Learning Representations (ICLR)},
+  year = {2023},
+}

@@ -1,0 +1,10 @@
+@article{xu2023denoising,
+  title = {Denoising Diffusion Probabilistic Models to Predict the Density of Molecular Clouds},
+  author = {Xu, Duo and Tan, Jonathan C and Hsu, Chia-Jung and Zhu, Ye},
+  journal = {The Astrophysical Journal (APJ)},
+  volume = {950},
+  number = {2},
+  pages = {146},
+  year = {2023},
+  publisher = {IOP Publishing},
+}

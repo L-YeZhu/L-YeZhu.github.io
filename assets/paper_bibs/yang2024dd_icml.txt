@@ -1,0 +1,8 @@
+@inproceedings{yang2024dataset,
+  title={What is Dataset Distillation Learning?},
+  author={Yang, William and Zhu, Ye and Deng, Zhiwei and Russakovsky, Olga},
+  booktitle={International Conference on Machine Learning},
+  pages={56812--56834},
+  year={2024},
+  organization={PMLR}
+}

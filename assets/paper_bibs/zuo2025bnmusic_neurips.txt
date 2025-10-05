@@ -1,0 +1,6 @@
+@inproceedings{zuo2025bnmusic,
+  title = {BNMusic: Blending Environmental Noises into Personalized Music},
+  author = {Zuo, Chi and Møller, Martin B. and Martínez-Nuevo, Pablo and Huang, Huayang and Wu, Yu and Zhu, Ye},
+  booktitle = {Conference on Neural Information Processing Systems (NeurIPS)},
+  year = {2025},
+}

@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://l-yezhu.github.io/sitemap.xml

@@ -1,0 +1,6 @@
+@inproceedings{wang2025silent,
+  title = {The Silent Assistant: NoiseQuery as Implicit Guidance for Goal-Driven Image Generation},
+  author = {Wang, Ruoyu and Huang, Huayang and Zhu, Ye and Russakovsky, Olga and Wu, Yu},
+  booktitle = {International Conference on Computer Vision (ICCV)},
+  year = {2025},
+}

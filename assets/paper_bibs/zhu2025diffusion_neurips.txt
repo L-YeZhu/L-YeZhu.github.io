@@ -1,0 +1,6 @@
+@inproceedings{zhu2025dynamic,
+  title = {Dynamic Diffusion Schrödinger Bridge in Astrophysical Observational Inversions},
+  author = {Zhu, Ye and Xu, Duo and Deng, Zhiwei and Tan, Jonathan and Russakovsky, Olga},
+  booktitle = {Conference on Neural Information Processing Systems (NeurIPS)},
+  year = {2025},
+}

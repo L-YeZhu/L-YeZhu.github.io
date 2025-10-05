@@ -1,0 +1,10 @@
+@article{xu2025exploring,
+  title={Exploring Magnetic Fields in Molecular Clouds through Denoising Diffusion Probabilistic Models},
+  author={Xu, Duo and Karcheski, Jenna and Law, Chi-Yan and Zhu, Ye and Hsu, Chia-Jung and Tan, Jonathan C},
+  journal={The Astrophysical Journal},
+  volume={980},
+  number={1},
+  pages={52},
+  year={2025},
+  publisher={IOP Publishing}
+}

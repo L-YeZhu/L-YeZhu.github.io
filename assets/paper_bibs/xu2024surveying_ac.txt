@@ -1,0 +1,9 @@
+@article{xu2024surveying,
+  title={Surveying image segmentation approaches in astronomy},
+  author={Xu, Duo and Zhu, Ye},
+  journal={Astronomy and Computing},
+  volume={48},
+  pages={100838},
+  year={2024},
+  publisher={Elsevier}
+}

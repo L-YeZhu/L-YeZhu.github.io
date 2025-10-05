@@ -1,0 +1,8 @@
+@inproceedings{zhu2021learning,
+  title = {Learning audio-visual correlations from variational cross-modal generation},
+  author = {Zhu, Ye and Wu, Yu and Latapie, Hugo and Yang, Yi and Yan, Yan},
+  booktitle = {ICASSP 2021-2021 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  pages = {4300--4304},
+  year = {2021},
+  organization = {IEEE},
+}

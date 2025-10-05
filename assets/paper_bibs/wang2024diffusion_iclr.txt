@@ -1,0 +1,6 @@
+@inproceedings{wang2024diffusion,
+  title = {Diffusion in Diffusion: Cyclic One-Way Diffusion for Text-Vision-Conditioned Generation},
+  author = {Wang*, Ruoyu and Yang*, Yongqi and Qian, Zhihao and Zhu, Ye and Wu, Yu},
+  booktitle = {The Twelfth International Conference on Learning Representations (ICLR)},
+  year = {2024},
+}

@@ -1,0 +1,7 @@
+@inproceedings{yang2025d,
+  title={D\^{} 3: Scaling Up Deepfake Detection by Learning from Discrepancy},
+  author={Yang, Yongqi and Qian, Zhihao and Zhu, Ye and Russakovsky, Olga and Wu, Yu},
+  booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
+  pages={23850--23859},
+  year={2025}
+}

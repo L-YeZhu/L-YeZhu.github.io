@@ -1,0 +1,8 @@
+@inproceedings{zhu2022quantized,
+  title = {Quantized GAN for Complex Music Generation from Dance Videos},
+  author = {Zhu, Ye and Olszewski, Kyle and Wu, Yu and Achlioptas, Panos and Chai, Menglei and Yan, Yan and Tulyakov, Sergey},
+  booktitle = {European Conference on Computer Vision (ECCV)},
+  pages = {182--199},
+  year = {2022},
+  organization = {Springer},
+}

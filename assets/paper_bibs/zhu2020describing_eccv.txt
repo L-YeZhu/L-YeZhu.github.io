@@ -1,0 +1,8 @@
+@inproceedings{zhu2020describing,
+  title = {Describing unseen videos via multi-modal cooperative dialog agents},
+  author = {Zhu, Ye and Wu, Yu and Yang, Yi and Yan, Yan},
+  booktitle = {European Conference on Computer Vision (ECCV)},
+  pages = {153--169},
+  year = {2020},
+  organization = {Springer},
+}
