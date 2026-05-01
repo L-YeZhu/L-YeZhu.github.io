@@ -14,6 +14,48 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+
+
+  <style>
+    ul.publication-list {
+        list-style-type:; 
+        padding-left: 0;
+    }
+    .paper-item {
+        display: flex;
+        align-items: flex-start; /* 顶部对齐 */
+        margin-bottom: 30px;     /* 每篇论文之间的间距 */
+    }
+    .paper-img-col {
+        flex: 0 0 160px;         /* 图片宽度固定 160px */
+        margin-right: 20px;      /* 图片和右边文字的距离 */
+    }
+    .paper-thumbnail {
+        width: 100%;
+        border-radius: 8px;      /* 圆角，看着更高级 */
+        border: 1px solid #ddd;  /* 给图片加一个极淡的边框，防纯白背景融进去 */
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* 极淡的阴影 */
+    }
+    .paper-text-col {
+        flex: 1;                 /* 文字占满剩余空间 */
+        line-height: 1.6;
+    }
+    
+    /* 手机端适配：屏幕变窄时图片自动跑到文字上面 */
+    @media (max-width: 768px) {
+        .paper-item {
+            flex-direction: column;
+        }
+        .paper-img-col {
+            margin-bottom: 12px;
+        }
+        .paper-thumbnail {
+            width: 180px;        /* 手机端图片稍微放大点 */
+        }
+    }
+  </style>
+
+
 </head>
 <body>
 
@@ -36,10 +78,10 @@
 				  <li><a href="index.html">Home</a></li>
 				  <!-- <li><a href="#lab">Lab</a></li> -->
 				  <li><a href="#publications">Research</a></li>
+                  <li><a href="#student">Students</a></li>
                   <li><a href="#teaching">Teaching</a></li>
 				  <!-- <li><a href="#">CV</a></li> -->
                   <li><a href="#talk">Talks</a></li>
-                  <!-- <li><a href="#student">Student</a></li> -->
                   <li><a href="#service">Service</a></li>
                   <li><a href="#contact">Contact</a></li> 
                   <!-- <li><a href="#mics">Misc</a></li>  -->
@@ -78,7 +120,7 @@
                 
                 
                 <div style="margin-top:2%; text-align:justify;">                
-					<p>I am a <em>Monge</em> tenure-track assistant professor in the Department of Computer Science, and a Principal Investigator (PI) at the Computer Science Laboratory (<a href="https://www.lix.polytechnique.fr">Laboratoire d'Informatique</a>, LIX) of École Polytechnique. I am also <a href="https://ellis.eu">an ELLIS member</a>. My research lies in Machine Learning and Computer Vision, with a particular focus on <b>dynamic generative models</b> (e.g., diffusion models) and their applications in <b>multimodal</b> settings (e.g., vision, audio, and text) as well as in <b>physics</b>  (e.g., astrophysical inversions). In recent years, I have been especially interested in understanding generation dynamics from trajectory and latent-space perspectives, and in developing new sampling techniques to enable fine-grained multimodal control (e.g., image editing and personalization).
+					<p>I am a <em>Monge</em> tenure-track assistant professor in the Department of Computer Science, and a Principal Investigator (PI) at the Computer Science Laboratory (<a href="https://www.lix.polytechnique.fr">Laboratoire d'Informatique</a>, LIX) of École Polytechnique. I am also <a href="https://ellis.eu">an ELLIS member</a>. My research lies in Machine Learning and Computer Vision, with a particular focus on <b>dynamic generative models</b> (e.g., diffusion models) and their applications in <b>multimodal</b> settings (e.g., vision, audio, and text) as well as in <b>physics</b>  (e.g., astrophysical inversions). In recent years, much of my research has focused on understanding generative dynamics from both trajectory and latent-space perspectives, and on developing novel sampling techniques to enable fine-grained, multimodal, and theoretically principled control.
 
 
                     <p>Before joining l'X in 2025, I spent two years as a postdoctoral researcher at <a href="https://visualai.princeton.edu">VisualAI lab</a>, Princeton University, working with <a href="https://www.cs.princeton.edu/~olgarus/">Prof. Olga Russakovsky</a>. I earned my Ph.D. in Computer Science under the supervision of <a href="https://tomyan555.github.io">Prof. Yan Yan</a> at Illinois Tech in Chicago. I also hold M.S. and B.S. degrees from Shanghai Jiao Tong University (SJTU), and received the French engineering diploma through the dual-degree program with SJTU after studying at École Polytechnique. </p>
@@ -88,6 +130,8 @@
 					
 					<dt><a href="https://scholar.google.com/citations?user=uk5WuyIAAAAJ&hl=en&authuser=1">[Google Scholar]</a>   &nbsp &nbsp   <a href="https://x.com/szyezhu">[Twitter]</a> &nbsp &nbsp  <a href="https://github.com/L-YeZhu">[GitHub]</a>  &nbsp &nbsp <a href="./assets/CV_0326.pdf">[CV]</a></dt>
                     <br>
+
+                    <p>📢 <b>Postdoc Hiring</b>: I am looking for a motivated postdoc candidate in <b>Visual Generative Models</b> or <b>AI4Physics</b> to jointly apply for a postdoctoral fellowship. Please reach out to me by the end of May (ideally as soon as possible) if you are interested!</p>
 
 
                     <p><em>📬 For students and external collaborators with questions about my availability, please see the <a href="#contact">Contact</a>.</em> </p>
@@ -99,9 +143,13 @@
 
             <div class="col-12" style="height: auto;">
                     
-                <h2 id="news">News</h2>
+                <h3 id="news">News</h3>
 
-                <p>01/2026: We are organizing the <a href="https://sites.google.com/nyu.edu/computervisionforscience">3rd CV4Science workshop</a> at CVPR 2026, join us and submit your poster <a href="https://forms.gle/NyhGYA2ZV6Cda2PZA">HERE</a>!</p>
+                <p>05/2026: Two papers on Geometry-Aware Text-to-Image Generation accepted to <b>ICML 2026</b>.</p>
+
+                <p>04/2026: Received the Hi!Paris Starting Career Chair as the leading-PI.</p>
+
+                <p>01/2026: We are organizing the <a href="https://sites.google.com/nyu.edu/computervisionforscience">3rd CV4Science workshop</a> at CVPR 2026, join us in June!</p>
 
                 <p>12/2025: I gave several seminar talks on the topic of <b>Dynamic and Structural Sampling for Interpretable Control in Multimodal Generation</b> at LIX. <a href="./assets/Talk_DynamicSampling.pdf"><b>[Talk Slides]</b></a></p> 
 
@@ -151,157 +199,337 @@
             <div class="col-12" style="height: auto;">
 
 
-                <h2 id="publications">Recent Publications</h2>
+                <h3 id="publications">Selected Publications</h3>
                 
                 <strong>* for equal contributions. A complete list can be found from <a href="https://scholar.google.com/citations?user=uk5WuyIAAAAJ&hl=en&authuser=1">Google Scholar</a>.</strong><br/>
 
                 <br>
 
 
-               <ul> <img src="./assets/project_overview.gif" alt="My research overview" width="400" /></ul>
+               <!-- <ul> <img src="./assets/project_overview.gif" alt="My research overview" width="400" /></ul> -->
 
-                <br>
+                <!-- <ul> -->
 
-                <ul>
-                <li class="paper" words="ML/CV">
-                <b>Dynamic Diffusion Schrödinger Bridge in Astrophysical Observational Inversions</b> <br>
-                <u><b>Ye Zhu</b></u>, Duo Xu, Zhiwei Deng, Jonathan C. Tan, Olga Russakovsky. <br>
-                In <em>Conference on Neural Information Processing Systems <b>(NeurIPS)</b></em>, 2025.<br> </li>
-                <dd><a href="https://www.arxiv.org/abs/2506.08065">[Paper]</a> &nbsp <a href="https://github.com/L-YeZhu/AstroDSB">[Code]</a> &nbsp <a href="./assets/paper_bibs/zhu2025diffusion_neurips.txt">[Bibtex]</a></dd>
-                </ul>
-
-                <ul>
-                <li class="paper" words="ML/CV">
-                <b>BNMusic: Blending Environmental Noises into Personalized Music</b> <br>
-                Chi Zuo, Martin B. Møller, Pablo Martínez-Nuevo, Huayang Huang, Yu Wu, <u><b>Ye Zhu</b></u>. <br>
-                In <em>Conference on Neural Information Processing Systems <b>(NeurIPS)</b></em>, 2025.<br> </li>
-                <!-- TL;DR:</li> -->
-                <dd><a href="https://arxiv.org/abs/2506.10754">[Paper]</a> &nbsp <a href="">[Code]</a> &nbsp <a href="./assets/paper_bibs/zuo2025bnmusic_neurips.txt">[Bibtex]</a></dd>
-                </ul>
+<!--                 <li class="paper" words="ML/CV">
+                <b>Restoring Initial Noise Sensitivity in Text-to-Image Distillation through Geometric Alignment</b> <br>
+                Huayang Huang, Ruoyu Wang, Jinhui Zhao, Wei Deng, Daiguo Zhou, Jian Luan, Yu Wu, <u><b>Ye Zhu</b></u>. <br>
+                In <em>International Conference on Machine Learning <b>(ICML)</b></em>, 2026. </li>
+                <dd><a href="">[Paper]</a> &nbsp <a href="">[Code]</a> &nbsp <a href="./assets/paper_bibs/">[Bibtex]</a></dd> -->
 
 
-                <ul>
-                    <li class="paper" words="ML/CV">
-                    <b>The Silent Assistant: NoiseQuery as Implicit Guidance for Goal-Driven Image Generation</b><br>
-                    Ruoyu Wang, Huayang Huang, <u><b>Ye Zhu</b></u>, Olga Russakovsky, Yu Wu. <br>
-                    In <em>International Conference on Computer Vision <b>(ICCV Highlight)</b></em>, 2025. </li>
-                 <dd><a href="https://arxiv.org/abs/2412.05101">[Paper]</a> &nbsp <a href="https://github.com/wangruoyu02/NoiseQuery">[Code]</a> &nbsp <a href="./assets/paper_bibs/wang2025silent_iccv.txt">[Bibtex]</a></dd>
-                </ul>
 
-                <ul>
-                    <li class="paper" words="ML/CV">
-                    <b>D<sup>3</sup>: Scaling Up Deepfake Detection by Learning from Discrepancy</b><br>
-                    Yongqi Yang*, Zhihao Qian*, <u><b>Ye Zhu</b></u>, Olga Russakovsky, and Yu Wu.<br>
-                    In <em>IEEE/CVF Conference on Computer Vision and Pattern Recognition <b>(CVPR)</b></em>, 2025. </li>
-                  <dd><a href="https://arxiv.org/abs/2404.04584">[Paper]</a> &nbsp <a href="https://github.com/BigAandSmallq/D3">[Code]</a> &nbsp <a href="./assets/paper_bibs/yang2025d3_cvpr.txt">[Bibtex]</a></dd>                       
-                </ul>
+                <li class="paper-item" words="ML/CV">
+                    <div class="paper-img-col">
+                        <img src="./assets/img/neurips25a_1.png" alt="AstroDSB Thumbnail" class="paper-thumbnail">
+                    </div>
+                    <div class="paper-text-col">
+                        <b>Dynamic Diffusion Schrödinger Bridge in Astrophysical Observational Inversions</b> <br>
+                        <u><b>Ye Zhu</b></u>, Duo Xu, Zhiwei Deng, Jonathan C. Tan, Olga Russakovsky. <br>
+                        In <em>Conference on Neural Information Processing Systems <b>(NeurIPS)</b></em>, 2025.<br>
+                        <div class="paper-links">
+                            <a href="https://www.arxiv.org/abs/2506.08065">[Paper]</a> &nbsp; 
+                            <a href="https://github.com/L-YeZhu/AstroDSB">[Code]</a> &nbsp; 
+                            <a href="./assets/paper_bibs/zhu2025diffusion_neurips.txt">[Bibtex]</a>
+                        </div>
+                    </div>
+                </li>
 
-                <ul>
-                    <li class="paper" words="ML/CV">
-                    <b>Exploring Magnetic Fields in Molecular Clouds through Denoising Diffusion Probabilistic Models</b><br>
-                    Duo Xu, Jenna Karcheski, Chi-Yan Law, <u><b>Ye Zhu</b></u>, Chia-Jung Hsu, and Jonathan Tan.<br> 
-                    In <em>The Astrophysics Journal <b>(APJ)</b></em>, 2025.</li>
-                  <dd><a href="https://arxiv.org/abs/2410.07032">[Paper]</a> &nbsp <a href="https://github.com/xuduo117/DDPM_Bmag">[Code]</a> &nbsp <a href="./assets/paper_bibs/xu2025exploring_apj.txt">[Bibtex]</a></dd>                         
-                </ul>
 
-                <ul>
-                    <li class="paper" words="ML/CV">
-                    <b>Vision + X: A Survey on Multimodal Learning in the Light of Data</b><br>
-                    <u><b>Ye Zhu</b></u>, Yu Wu, Nicu Sebe, and Yan Yan. <br>
-                    In <em>IEEE Transactions on Pattern Analysis and Machine Intelligence <b>(TPAMI)</b></em>, 2024. </li>
-                    <dd><a href="https://arxiv.org/abs/2210.02884">[Paper]</a> &nbsp <a href="./assets/paper_bibs/zhu2024vision_tpami.txt">[Bibtex]</a></dd>
-                </ul>
+                <!-- BNMusic -->
+                <li class="paper-item" words="ML/CV">
+                    <div class="paper-img-col">
+                        <img src="./assets/img/neurips25b_2.png" alt="BNMusic Thumbnail" class="paper-thumbnail">
+                    </div>
+                    <div class="paper-text-col">
+                        <b>BNMusic: Blending Environmental Noises into Personalized Music</b> <br>
+                        Chi Zuo, Martin B. Møller, Pablo Martínez-Nuevo, Huayang Huang, Yu Wu, <u><b>Ye Zhu</b></u>. <br>
+                        In <em>Conference on Neural Information Processing Systems <b>(NeurIPS)</b></em>, 2025.<br>
+                        <div class="paper-links">
+                            <a href="https://arxiv.org/abs/2506.10754">[Paper]</a> &nbsp; 
+                            <a href="https://github.com/D-fas/BNMusic">[Code]</a> &nbsp; 
+                            <a href="./assets/paper_bibs/zuo2025bnmusic_neurips.txt">[Bibtex]</a>
+                        </div>
+                    </div>
+                </li>
 
-                <ul>
-                    <li class="paper" words="ML/CV">
-                    <b>What is Dataset Distillation Learning?</b><br>
-                    William Yang, <u><b>Ye Zhu</b></u>, Zhiwei Deng, Olga Russakovsky.<br> 
-                    In <em>International Conference on Machine Learning <b>(ICML)</b></em>, 2024. </li>
-                  <dd><a href="https://arxiv.org/abs/2406.04284">[Paper]</a> &nbsp <a href="https://github.com/princetonvisualai/What-is-Dataset-Distillation-Learning">[Code]</a> &nbsp <a href="./assets/paper_bibs/yang2024dd_icml.txt">[Bibtex]</a></dd> 
-                </ul>
+
+                <!-- The Silent Assistant -->
+                <li class="paper-item" words="ML/CV">
+                    <div class="paper-img-col">
+                        <img src="./assets/img/iccv25.png" alt="NoiseQuery Thumbnail" class="paper-thumbnail">
+                    </div>
+                    <div class="paper-text-col">
+                        <b>The Silent Assistant: NoiseQuery as Implicit Guidance for Goal-Driven Image Generation</b><br>
+                        Ruoyu Wang, Huayang Huang, <u><b>Ye Zhu</b></u>, Olga Russakovsky, Yu Wu. <br>
+                        In <em>International Conference on Computer Vision <b>(ICCV Highlight)</b></em>, 2025.<br>
+                        <div class="paper-links">
+                            <a href="https://arxiv.org/abs/2412.05101">[Paper]</a> &nbsp; 
+                            <a href="https://github.com/wangruoyu02/NoiseQuery">[Code]</a> &nbsp; 
+                            <a href="./assets/paper_bibs/wang2025silent_iccv.txt">[Bibtex]</a>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- D^3 -->
+                <li class="paper-item" words="ML/CV">
+                    <div class="paper-img-col">
+                        <img src="./assets/img/cvpr25_d3.png" alt="D3 Thumbnail" class="paper-thumbnail">
+                    </div>
+                    <div class="paper-text-col">
+                        <b>D<sup>3</sup>: Scaling Up Deepfake Detection by Learning from Discrepancy</b><br>
+                        Yongqi Yang*, Zhihao Qian*, <u><b>Ye Zhu</b></u>, Olga Russakovsky, and Yu Wu.<br>
+                        In <em>IEEE/CVF Conference on Computer Vision and Pattern Recognition <b>(CVPR)</b></em>, 2025.<br>
+                        <div class="paper-links">
+                            <a href="https://arxiv.org/abs/2404.04584">[Paper]</a> &nbsp; 
+                            <a href="https://github.com/BigAandSmallq/D3">[Code]</a> &nbsp; 
+                            <a href="./assets/paper_bibs/yang2025d3_cvpr.txt">[Bibtex]</a>
+                        </div>
+                    </div>
+                </li>
+
+
+
+                <!-- Exploring Magnetic Fields -->
+                <li class="paper-item" words="ML/CV">
+                    <div class="paper-img-col">
+                        <img src="./assets/img/apj25.png" alt="Magnetic Fields Thumbnail" class="paper-thumbnail">
+                    </div>
+                    <div class="paper-text-col">
+                        <b>Exploring Magnetic Fields in Molecular Clouds through Denoising Diffusion Probabilistic Models</b><br>
+                        Duo Xu, Jenna Karcheski, Chi-Yan Law, <u><b>Ye Zhu</b></u>, Chia-Jung Hsu, and Jonathan Tan.<br> 
+                        In <em>The Astrophysics Journal <b>(APJ)</b></em>, 2025.<br>
+                        <div class="paper-links">
+                            <a href="https://arxiv.org/abs/2410.07032">[Paper]</a> &nbsp; 
+                            <a href="https://github.com/xuduo117/DDPM_Bmag">[Code]</a> &nbsp; 
+                            <a href="./assets/paper_bibs/xu2025exploring_apj.txt">[Bibtex]</a>
+                        </div>
+                    </div>
+                </li>
+
+
+                <!-- Vision + X -->
+                <li class="paper-item" words="ML/CV">
+                    <div class="paper-img-col">
+                        <img src="./assets/img/tpami24.png" alt="Vision+X Thumbnail" class="paper-thumbnail">
+                    </div>
+                    <div class="paper-text-col">
+                        <b>Vision + X: A Survey on Multimodal Learning in the Light of Data</b><br>
+                        <u><b>Ye Zhu</b></u>, Yu Wu, Nicu Sebe, and Yan Yan. <br>
+                        In <em>IEEE Transactions on Pattern Analysis and Machine Intelligence <b>(TPAMI)</b></em>, 2024.<br>
+                        <div class="paper-links">
+                            <a href="https://arxiv.org/abs/2210.02884">[Paper]</a> &nbsp; 
+                            <a href="./assets/paper_bibs/zhu2024vision_tpami.txt">[Bibtex]</a>
+                        </div>
+                    </div>
+                </li>
+
+
+                <!-- Dataset Distillation -->
+                <li class="paper-item" words="ML/CV">
+                    <div class="paper-img-col">
+                        <img src="./assets/img/icml24.png" alt="Dataset Distillation Thumbnail" class="paper-thumbnail">
+                    </div>
+                    <div class="paper-text-col">
+                        <b>What is Dataset Distillation Learning?</b><br>
+                        William Yang, <u><b>Ye Zhu</b></u>, Zhiwei Deng, Olga Russakovsky.<br> 
+                        In <em>International Conference on Machine Learning <b>(ICML)</b></em>, 2024.<br>
+                        <div class="paper-links">
+                            <a href="https://arxiv.org/abs/2406.04284">[Paper]</a> &nbsp; 
+                            <a href="https://github.com/princetonvisualai/What-is-Dataset-Distillation-Learning">[Code]</a> &nbsp; 
+                            <a href="./assets/paper_bibs/yang2024dd_icml.txt">[Bibtex]</a>
+                        </div>
+                    </div>
+                </li>
             
 
-                <ul>
-                    <li class="paper" words="ML/CV">
-                    <b>Diffusion in Diffusion: Cyclic One-Way Diffusion for Text-Vision-Conditioned Generation</b><br>
-                    Ruoyu Wang*, Yongqi Yang*, Zhihao Qian, <u><b>Ye Zhu</b></u>, and Yu Wu.<br> 
-                    In <em>International Conference on Learning Representations <b>(ICLR)</b></em>, 2024.</li>
-                  <dd><a href="https://arxiv.org/abs/2306.08247">[Paper]</a> &nbsp <a href="https://github.com/oho43/COW">[Code]</a> &nbsp <a href="./assets/paper_bibs/wang2024diffusion_iclr.txt">[Bibtex]</a></dd> 
-                </ul>
+                <!-- Diffusion in Diffusion -->
+                <li class="paper-item" words="ML/CV">
+                    <div class="paper-img-col">
+                        <img src="./assets/img/iclr24_1.png" alt="Diffusion in Diffusion Thumbnail" class="paper-thumbnail">
+                    </div>
+                    <div class="paper-text-col">
+                        <b>Diffusion in Diffusion: Cyclic One-Way Diffusion for Text-Vision-Conditioned Generation</b><br>
+                        Ruoyu Wang*, Yongqi Yang*, Zhihao Qian, <u><b>Ye Zhu</b></u>, and Yu Wu.<br> 
+                        In <em>International Conference on Learning Representations <b>(ICLR)</b></em>, 2024.<br>
+                        <div class="paper-links">
+                            <a href="https://arxiv.org/abs/2306.08247">[Paper]</a> &nbsp; 
+                            <a href="https://github.com/oho43/COW">[Code]</a> &nbsp; 
+                            <a href="./assets/paper_bibs/wang2024diffusion_iclr.txt">[Bibtex]</a>
+                        </div>
+                    </div>
+                </li>
 
 
-                <ul>
-                    <li class="paper" words="ML/CV">
-                    <b>Surveying Image Segmentation Approaches in Astronomy</b><br>
-                    Duo Xu, <u><b>Ye Zhu</b></u>.  <br>
-                    In <em>Astronomy and Computing</em>, 2024.</li>
-                    <dd><a href="http://arxiv.org/abs/2405.14238">[Paper]</a> &nbsp <a href="./assets/paper_bibs/xu2024surveying_ac.txt">[Bibtex]</a></dd>
-                </ul>
+                <!-- Image Segmentation Astronomy -->
+                <li class="paper-item" words="ML/CV">
+                    <div class="paper-img-col">
+                        <img src="./assets/img/astro.png" alt="Astro Segmentation Thumbnail" class="paper-thumbnail">
+                    </div>
+                    <div class="paper-text-col">
+                        <b>Surveying Image Segmentation Approaches in Astronomy</b><br>
+                        Duo Xu, <u><b>Ye Zhu</b></u>.<br>
+                        In <em>Astronomy and Computing</em>, 2024.<br>
+                        <div class="paper-links">
+                            <a href="http://arxiv.org/abs/2405.14238">[Paper]</a> &nbsp; 
+                            <a href="./assets/paper_bibs/xu2024surveying_ac.txt">[Bibtex]</a>
+                        </div>
+                    </div>
+                </li>
 
-                <ul>
-                    <li class="paper" words="ML/CV">
-                    <b>Boundary Guided Learning-Free Semantic Control with Diffusion Models</b><br>
-                    <u><b>Ye Zhu</b></u>, Yu Wu, Zhiwei Deng, Olga Russakovsky, and Yan Yan. <br> 
-                    In <em>Conference on Neural Information Processing Systems <b>(NeurIPS)</b></em>, 2023. </li>
-                  <dd><a href="https://arxiv.org/abs/2302.08357">[Paper]</a> &nbsp <a href="https://github.com/L-YeZhu/BoundaryDiffusion">[Code]</a> &nbsp <a href="./assets/paper_bibs/zhu2023boundary_neurips.txt">[Bibtex]</a></dd> 
-                </ul>
-
-                <ul>
-                    <li class="paper" words="ML/CV">
-                    <b>Denoising Diffusion Probabilistic Models to Predict the Density of Molecular Clouds</b><br>
-                    Duo Xu, Jonathan Tan, Chia-Jung Hsu, and <u><b>Ye Zhu</b></u>. <br>
-                    In <em>The Astrophysics Journal <b>(APJ)</b></em>, 2023. </li>
-                    <dd><a href="https://arxiv.org/abs/2304.01670">[Paper]</a> &nbsp <a href="./assets/paper_bibs/xu2023denoising_apj.txt">[Bibtex]</a></dd> 
-                </ul>
-
-                <ul>
-                    <li class="paper" words="ML/CV">
-                    <b>Discrete Contrastive Diffusion for Cross-Modal Music and Image Generation</b><br>
-                    <u><b>Ye Zhu</b></u>, Yu Wu, Kyle Olszewski, Jian Ren, Sergey Tulyakov, and Yan Yan. <br>
-                    In <em>International Conference on Learning Representations <b>(ICLR)</b></em>, 2023. </li>
-                    <dd><a href="https://arxiv.org/abs/2206.07771">[Paper]</a> &nbsp <a href="https://github.com/L-YeZhu/CDCD">[Code]</a> &nbsp <a href="./assets/paper_bibs/zhu2023discrete_iclr.txt">[Bibtex]</a></dd>    
-                </ul>
-
-                <ul>
-                    <li class="paper" words="ML/CV">
-                    <b>Quantized GAN for Complex Music Generation from Dance Videos</b><br>
-                    <u><b>Ye Zhu</b></u>, Kyle Olszewski, Yu Wu, Panos Achlioptas, Menglei Chai, Yan Yan, and Sergey Tulyakov. <br>
-                    In <em>European Conference on Computer Vision <b>(ECCV)</b></em>, 2022. </li>
-                    <dd><a href="https://arxiv.org/abs/2204.00604">[Paper]</a> &nbsp <a href="https://github.com/L-YeZhu/D2M-GAN">[Code]</a> &nbsp <a href="./assets/paper_bibs/zhu2022quantized_eccv.txt">[Bibtex]</a></dd>
-                </ul>
-
-                <ul>
-                    <li class="paper" words="ML/CV">
-                    <b>Saying the Unseen: Video Descriptions via Dialog Agents</b><br>
-                    <u><b>Ye Zhu</b></u>, Yu Wu, Yi Yang, and Yan Yan.<br>
-                    In <em>IEEE Transactions on Pattern Analysis and Machine Intelligence <b>(TPAMI)</b></em>, 2022.</li>
-                    <dd><a href="https://ieeexplore.ieee.org/abstract/document/9468337">[Paper]</a> &nbsp <a href="https://github.com/L-YeZhu/Video-Description-via-Dialog-Agents-ECCV2020">[Code]</a> &nbsp <a href="./assets/paper_bibs/zhu2022saying_tpami.txt">[Bibtex]</a></dd>
-                </ul>
+                <!-- Boundary Guided Learning-Free -->
+                <li class="paper-item" words="ML/CV">
+                    <div class="paper-img-col">
+                        <img src="./assets/img/neurips23.png" alt="Boundary Diffusion Thumbnail" class="paper-thumbnail">
+                    </div>
+                    <div class="paper-text-col">
+                        <b>Boundary Guided Learning-Free Semantic Control with Diffusion Models</b><br>
+                        <u><b>Ye Zhu</b></u>, Yu Wu, Zhiwei Deng, Olga Russakovsky, and Yan Yan. <br> 
+                        In <em>Conference on Neural Information Processing Systems <b>(NeurIPS)</b></em>, 2023.<br>
+                        <div class="paper-links">
+                            <a href="https://arxiv.org/abs/2302.08357">[Paper]</a> &nbsp; 
+                            <a href="https://github.com/L-YeZhu/BoundaryDiffusion">[Code]</a> &nbsp; 
+                            <a href="./assets/paper_bibs/zhu2023boundary_neurips.txt">[Bibtex]</a>
+                        </div>
+                    </div>
+                </li>
 
 
-                <ul>
-                    <li class="paper" words="ML/CV">
-                    <b>Learning Audio-Visual Correlations From Variational Cross-Modal Generations</b><br>
-                    <u><b>Ye Zhu</b></u>, Yu Wu, Hugo Latapie, Yi Yang, and Yan Yan. <br>
-                    In <em>IEEE International Conference on Acoustics, Speech and Signal Processing <b>(ICASSP)</b></em>, 2021. </li>
-                    <dd><a href="https://ieeexplore.ieee.org/abstract/document/9414296">[Paper]</a> &nbsp <a href="https://github.com/L-YeZhu/Learning-Audio-Visual-Correlations">[Code]</a> &nbsp <a href="./assets/paper_bibs/zhu2021learning_iccasp.txt">[Bibtex]</a></dd>
-                </ul>
+                <!-- Denoising Diffusion Molecular Clouds -->
+                <li class="paper-item" words="ML/CV">
+                    <div class="paper-img-col">
+                        <img src="./assets/img/apj23.png" alt="Astro DDPM Thumbnail" class="paper-thumbnail">
+                    </div>
+                    <div class="paper-text-col">
+                        <b>Denoising Diffusion Probabilistic Models to Predict the Density of Molecular Clouds</b><br>
+                        Duo Xu, Jonathan Tan, Chia-Jung Hsu, and <u><b>Ye Zhu</b></u>. <br>
+                        In <em>The Astrophysics Journal <b>(APJ)</b></em>, 2023.<br>
+                        <div class="paper-links">
+                            <a href="https://arxiv.org/abs/2304.01670">[Paper]</a> &nbsp; 
+                            <a href="./assets/paper_bibs/xu2023denoising_apj.txt">[Bibtex]</a>
+                        </div>
+                    </div>
+                </li>
 
-                <ul>
-                    <li class="paper" words="ML/CV">
-                    <b>Describing Unseen Videos via Multi-Modal Cooperative Dialog Agents</b><br>
-                    <u><b>Ye Zhu</b></u>, Yu Wu, Yi Yang, and Yan Yan. <br>
-                    In <em>European Conference on Computer Vision <b>(ECCV)</b></em>, 2020.
-                    <dd><a href="https://link.springer.com/chapter/10.1007/978-3-030-58592-1_10">[Paper]</a> &nbsp <a href="https://github.com/L-YeZhu/Video-Description-via-Dialog-Agents-ECCV2020">[Code]</a> &nbsp <a href="./assets/paper_bibs/zhu2020describing_eccv.txt">[Bibtex]</a></dd>
-                </ul>
+
+                  <!-- CDCD -->
+                <li class="paper-item" words="ML/CV">
+                    <div class="paper-img-col">
+                        <img src="./assets/img/iclr23.png" alt="CDCD Thumbnail" class="paper-thumbnail">
+                    </div>
+                    <div class="paper-text-col">
+                        <b>Discrete Contrastive Diffusion for Cross-Modal Music and Image Generation</b><br>
+                        <u><b>Ye Zhu</b></u>, Yu Wu, Kyle Olszewski, Jian Ren, Sergey Tulyakov, and Yan Yan. <br>
+                        In <em>International Conference on Learning Representations <b>(ICLR)</b></em>, 2023.<br>
+                        <div class="paper-links">
+                            <a href="https://arxiv.org/abs/2206.07771">[Paper]</a> &nbsp; 
+                            <a href="https://github.com/L-YeZhu/CDCD">[Code]</a> &nbsp; 
+                            <a href="./assets/paper_bibs/zhu2023discrete_iclr.txt">[Bibtex]</a>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Quantized GAN -->
+                <li class="paper-item" words="ML/CV">
+                    <div class="paper-img-col">
+                        <img src="./assets/img/eccv2022.png" alt="D2M-GAN Thumbnail" class="paper-thumbnail">
+                    </div>
+                    <div class="paper-text-col">
+                        <b>Quantized GAN for Complex Music Generation from Dance Videos</b><br>
+                        <u><b>Ye Zhu</b></u>, Kyle Olszewski, Yu Wu, Panos Achlioptas, Menglei Chai, Yan Yan, and Sergey Tulyakov. <br>
+                        In <em>European Conference on Computer Vision <b>(ECCV)</b></em>, 2022.<br>
+                        <div class="paper-links">
+                            <a href="https://arxiv.org/abs/2204.00604">[Paper]</a> &nbsp; 
+                            <a href="https://github.com/L-YeZhu/D2M-GAN">[Code]</a> &nbsp; 
+                            <a href="./assets/paper_bibs/zhu2022quantized_eccv.txt">[Bibtex]</a>
+                        </div>
+                    </div>
+                </li>
+
+
+
+                <!-- Saying the Unseen -->
+                <li class="paper-item" words="ML/CV">
+                    <div class="paper-img-col">
+                        <img src="./assets/img/tpami_22.png" alt="Saying Unseen Thumbnail" class="paper-thumbnail">
+                    </div>
+                    <div class="paper-text-col">
+                        <b>Saying the Unseen: Video Descriptions via Dialog Agents</b><br>
+                        <u><b>Ye Zhu</b></u>, Yu Wu, Yi Yang, and Yan Yan.<br>
+                        In <em>IEEE Transactions on Pattern Analysis and Machine Intelligence <b>(TPAMI)</b></em>, 2022.<br>
+                        <div class="paper-links">
+                            <a href="https://ieeexplore.ieee.org/abstract/document/9468337">[Paper]</a> &nbsp; 
+                            <a href="https://github.com/L-YeZhu/Video-Description-via-Dialog-Agents-ECCV2020">[Code]</a> &nbsp; 
+                            <a href="./assets/paper_bibs/zhu2022saying_tpami.txt">[Bibtex]</a>
+                        </div>
+                    </div>
+                </li>
+
+
+                <!-- Learning Audio-Visual Correlations -->
+                <li class="paper-item" words="ML/CV">
+                    <div class="paper-img-col">
+                        <img src="./assets/img/icassp21.png" alt="A-V Correlations Thumbnail" class="paper-thumbnail">
+                    </div>
+                    <div class="paper-text-col">
+                        <b>Learning Audio-Visual Correlations From Variational Cross-Modal Generations</b><br>
+                        <u><b>Ye Zhu</b></u>, Yu Wu, Hugo Latapie, Yi Yang, and Yan Yan. <br>
+                        In <em>IEEE International Conference on Acoustics, Speech and Signal Processing <b>(ICASSP)</b></em>, 2021.<br>
+                        <div class="paper-links">
+                            <a href="https://ieeexplore.ieee.org/abstract/document/9414296">[Paper]</a> &nbsp; 
+                            <a href="https://github.com/L-YeZhu/Learning-Audio-Visual-Correlations">[Code]</a> &nbsp; 
+                            <a href="./assets/paper_bibs/zhu2021learning_iccasp.txt">[Bibtex]</a>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Describing Unseen Videos -->
+                <li class="paper-item" words="ML/CV">
+                    <div class="paper-img-col">
+                        <img src="./assets/img/eccv20.png" alt="Describing Unseen Thumbnail" class="paper-thumbnail">
+                    </div>
+                    <div class="paper-text-col">
+                        <b>Describing Unseen Videos via Multi-Modal Cooperative Dialog Agents</b><br>
+                        <u><b>Ye Zhu</b></u>, Yu Wu, Yi Yang, and Yan Yan. <br>
+                        In <em>European Conference on Computer Vision <b>(ECCV)</b></em>, 2020.<br>
+                        <div class="paper-links">
+                            <a href="https://link.springer.com/chapter/10.1007/978-3-030-58592-1_10">[Paper]</a> &nbsp; 
+                            <a href="https://github.com/L-YeZhu/Video-Description-via-Dialog-Agents-ECCV2020">[Code]</a> &nbsp; 
+                            <a href="./assets/paper_bibs/zhu2020describing_eccv.txt">[Bibtex]</a>
+                        </div>
+                    </div>
+                </li>
+                <!-- </ul> -->
 
             </div>
 
 
+            <!-- Students -->
+
+             <div class="col-12" style="height: auto;">    
+                <h3 id="student">Students</h3>           
+
+                <h4>Ph.D. Students: </h4>
+
+                <!-- <ul><b>Samuele Ruffino</b>: Ph.D. student from 09/2026. <br> -->
+
+                <b>Enzo Pinchon</b> (Co-supervise with Prof. Johannes Lutzeyer): Ph.D. student from 09/2026. <br>
+
+                <b>Achilleas Tsimichodimos</b> (Co-supervise with Prof. Michalis Vazirgiannis): Ph.D. student from 01/2026. </ul>
+
+                <h4>Research Interns: </h4>
+
+                <b>Sheng Wan</b> (French Engineering Student at X)<br>
+
+
+
+
+
+            </div>
+
             <!-- Teaching -->
 
             <div class="col-12" style="height: auto;">    
-                <h2 id="teaching">Recent Teaching</h2>
+                <h3 id="teaching">Teaching</h3>
                 
                 <strong> Spring 2026 </strong><br/>
 
@@ -327,7 +555,7 @@
 
 
             <div class="col-12" style="height: auto;">    
-                <h2 id="talk">Recent Talks and Outreach</h2>
+                <h3 id="talk">Recent Talks and Outreach</h3>
 
                 <b>12/2025:</b> Talks on Dynamic and Structural Sampling for Interpretable Control in Multimodal Generation at LIX, Ecole Polytechnique, France. <br>
 
@@ -358,7 +586,7 @@
 
 
             <div class="col-12" style="height: auto;">    
-                <h2 id="service">Service</h2>
+                <h3 id="service">Service</h3>
                 
                 <strong> Workshop Organizers </strong><br/>
 
@@ -390,7 +618,7 @@
 
             <!-- Contact -->
             <div class="col-12" style="height: auto;">    
-                <h2 id="contact">Say Hi !</h2>
+                <h3 id="contact">Say Hi !</h3>
 
                 <p>Thanks for your interest in getting in touch! You can reach me at: ye[dot]zhu[at]polytechnique[dot]edu</p>
 
