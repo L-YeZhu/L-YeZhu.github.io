@@ -1,0 +1,6 @@
+@inproceedings{huang2026gad,
+  title={Restoring Initial Noise Sensitivity in Text-to-Image Distillation through Geometric Alignment},
+  author={Huang, Huayang and Wang, Ruoyu and Zhao, Jinhui and Deng, Wei and Zhou, Daiguo and Luan, Jian and Wu, Yu and Zhu, Ye},
+  booktitle={International Conference on Machine Learning},
+  year={2026},
+}
