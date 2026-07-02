@@ -1,0 +1,6 @@
+@inproceedings{dhouib2026efficient,
+  title={Efficient Document Tampering Localization with Multi-Level Discrepancy Features and Unified DCT–Quantization Embedding},
+  author={Dhouib, Mohamed and Zhu, Ye and Vanier, Sonia and Shabou, Aymen},
+  booktitle={European Conference on Computer Vision (ECCV)},
+  year={2026},
+}
