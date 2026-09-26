@@ -1,0 +1,6 @@
+@inproceedings{yoo2025d2d,
+  title={D2D: Detector-to-Differentiable Critic for Improved Numeracy in Text-to-Image Generation},
+  author={Yoo, Nobline and Russakovsky, Olga and Zhu, Ye},
+  booktitle={The Fortieth Annual Conference on Neural Information Processing Systems (NeurIPS)},
+  year={2026}
+}
